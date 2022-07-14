@@ -1,0 +1,26 @@
+CREATE TABLE courses
+(
+    ID          BIGINT PRIMARY KEY NOT NULL,
+    NAME        VARCHAR            NOT NULL,
+    DESCRIPTION VARCHAR            NOT NULL
+);
+
+ALTER TABLE students
+    DROP COLUMN course;
+
+CREATE TABLE students_courses
+(
+    STUDENT_ID BIGINT NOT NULL,
+    COURSE_ID  BIGINT NOT NULL,
+    PRIMARY KEY (STUDENT_ID, COURSE_ID)
+);
+
+ALTER TABLE students_courses
+    ADD FOREIGN KEY (STUDENT_ID)
+        REFERENCES students (ID)
+        ON DELETE CASCADE;
+
+ALTER TABLE students_courses
+    ADD FOREIGN KEY (COURSE_ID)
+        REFERENCES courses (ID)
+        ON DELETE CASCADE;

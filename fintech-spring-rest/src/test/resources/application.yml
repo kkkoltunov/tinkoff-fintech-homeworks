@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+  flyway:
+    enabled: true
+    locations: "classpath:/testdb/migration"
+
+server:
+  port: 8080
