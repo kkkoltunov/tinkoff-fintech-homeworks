@@ -18,4 +18,4 @@
 
 :o: Добавить продюсера для топика и после создания/изменения/удаления любой сущности `Student`, отправлять актуальное состояние этой сущности в `Kafka`.
 
-:o: Реализовать `Transactional outbox`[https://microservices.io/patterns/data/transactional-outbox.html] для корректного отправления сообщений в `Kafka`.
+:o: Реализовать [Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html) для корректного отправления сообщений в `Kafka`.
